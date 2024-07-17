@@ -18,7 +18,7 @@ public class Negative_TestCase {
 	
 WebDriver driver;
 	
-	@Test
+	@Test(priority = 3)
 	public void TestValidation() throws IOException {
 		driver = new ChromeDriver();
 		driver.get("https://demo.guru99.com/V1/index.php");

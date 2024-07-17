@@ -23,7 +23,7 @@ import TDD.utils.BaseClass;
 public class TestCase_001  extends AbstractClass{
 	
 	WebDriver driver;
-	@Test
+	@Test(priority = 1)
 	public void LoginValidation() throws IOException {
 		driver = new ChromeDriver();
 		driver.get("https://www.demo.guru99.com/v4/");
@@ -49,10 +49,9 @@ public class TestCase_001  extends AbstractClass{
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		XSSFSheet sheet = workbook.createSheet("Test-Data");
 		
-		
-		
-		XSSFRow row1 = sheet.createRow(0);
-		XSSFRow row2 = sheet.createRow(1);
+		int row = sheet.getLastRowNum();		
+		XSSFRow row1 = sheet.createRow(row+1);
+		XSSFRow row2 = sheet.createRow(row+1+1);
 		
 		row1.createCell(0).setCellValue("User ID");
 		row1.createCell(1).setCellValue("Passowrd");

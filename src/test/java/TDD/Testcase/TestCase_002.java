@@ -19,7 +19,7 @@ public class TestCase_002 {
 	
 	WebDriver driver;
 	
-	@Test
+	@Test(priority = 1)
 	public void TestValidation() throws IOException {
 		driver = new ChromeDriver();
 		driver.get("https://demo.guru99.com/V1/index.php");
